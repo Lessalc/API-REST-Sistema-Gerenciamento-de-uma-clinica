@@ -40,15 +40,8 @@ public class SecurityConfigurations {
     }
 
     @Bean
-    public static PasswordEncoder passwordEncoder(){
+    public PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
     }
 
-    public static void main(String[] args) {
-
-        var passwordEncoder = passwordEncoder();
-
-        String hashedPassword = passwordEncoder.encode("root");
-        System.out.println(hashedPassword);
-    }
 }
